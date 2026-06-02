@@ -1,0 +1,7 @@
+def factorial_gen(max_n):
+    a = 1
+    yield a
+    for b in range(1, max_n + 1):
+        a = a * b
+        yield a
+print(list(factorial_gen(5)))
