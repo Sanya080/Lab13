@@ -1,0 +1,6 @@
+from collections import defaultdict
+def group_products(products):
+    a = defaultdict(list)
+    for b in products:
+        a[b["category"]].append(b["name"])
+    return a
