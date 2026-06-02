@@ -1,0 +1,11 @@
+from collections import namedtuple
+Student = namedtuple("Student",
+["first_name", "last_name", "group", "average_mark"])
+def get_best_student(students):
+    if len(students) == 0:
+        return None
+    a = students[0]
+    for b in students:
+        if b.average_mark > a.average_mark:
+            a = b
+    return a.last_name + " " + a.first_name[0] + "."
