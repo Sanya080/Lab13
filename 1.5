@@ -1,0 +1,6 @@
+raw_numbers = ["0501234567", "+380501234567", "(050)123-45-67"]
+a = [
+    "+380" + "".join(b for b in c if b.isdigit())[-10:]
+    for c in raw_numbers
+]
+print(a)
