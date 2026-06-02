@@ -1,0 +1,8 @@
+from collections import Counter
+def analyze_text(text, n):
+    a = []
+    for b in text.lower().split():
+        a.append(b.strip(".,!?;:"))
+    c = Counter(a)
+    return c.most_common(n)
+
