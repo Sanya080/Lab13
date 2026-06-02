@@ -1,0 +1,7 @@
+def read_in_chunks(total_size, chunk_size=1024):
+    a = total_size
+    while a > 0:
+        b = min(chunk_size, a)
+        yield "A" * b
+        a = a - b
+print(list(read_in_chunks(2500, 1000)))
